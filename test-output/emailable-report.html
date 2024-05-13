@@ -9,36 +9,38 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">57,225</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">6,884</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">ewf_TestCases.TC_03_CreateAccountScreen</td><td><a href="#m0">PopUPscreen</a></td><td rowspan="1">1715611000353</td><td rowspan="1">57165</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">ewf_TestCases.TC_01_LoginPage</td><td><a href="#m0">getResult</a></td><td rowspan="1">1715624558931</td><td rowspan="1">-1715624558931</td></tr><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">ewf_TestCases.TC_01_LoginPage</td><td><a href="#m1">PopUPscreen</a></td><td rowspan="1">1715624552116</td><td rowspan="1">6787</td></tr><tr><th colspan="4">Default test &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="1">ewf_TestCases.TC_01_LoginPage</td><td><a href="#m2">endTest</a></td><td rowspan="1">1715624559017</td><td rowspan="1">0</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">ewf_TestCases.TC_03_CreateAccountScreen#PopUPscreen</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;errors&apos;]//li&quot;}
-  (Session info: chrome=124.0.6367.201)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.19.1&apos;, revision: &apos;abe0ee07dc&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [dfab0dfccdea2f50d7e9dab31838a2e5, findElement {value=//div[@class=&apos;errors&apos;]//li, using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.201, chrome: {chromedriverVersion: 124.0.6367.201 (46cf136d27d..., userDataDir: C:\Users\welcome\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65504}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65504/devtoo..., se:cdpVersion: 124.0.6367.201, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: dfab0dfccdea2f50d7e9dab31838a2e5
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-	at base.BaseClass.getElement(BaseClass.java:162)
-	at eFW_Pages.CreateAccountPage.createUser(CreateAccountPage.java:77)
-	at ewf_TestCases.TC_03_CreateAccountScreen.PopUPscreen(TC_03_CreateAccountScreen.java:17)
+<h2>Default test</h2><h3 id="m0">ewf_TestCases.TC_01_LoginPage#getResult</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
+Can inject only one of &lt;ITestContext, XmlTest&gt; into a @AfterTest annotated getResult.
+For more information on native dependency injection please refer to https://testng.org/doc/documentation-main.html#native-dependency-injection
+	at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:436)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:350)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:693)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:306)
+	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:663)
+	at org.testng.TestRunner.afterRun(TestRunner.java:933)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">ewf_TestCases.TC_01_LoginPage#PopUPscreen</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;com.aventstack.extentreports.ExtentTest.log(com.aventstack.extentreports.Status, String)&quot; because &quot;eFW_Pages.HomePage.test&quot; is null
+	at eFW_Pages.HomePage.clickProfileIcon(HomePage.java:21)
+	at ewf_TestCases.TC_01_LoginPage.PopUPscreen(TC_01_LoginPage.java:15)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -66,5 +68,6 @@ Session ID: dfab0dfccdea2f50d7e9dab31838a2e5
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">ewf_TestCases.TC_01_LoginPage#endTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

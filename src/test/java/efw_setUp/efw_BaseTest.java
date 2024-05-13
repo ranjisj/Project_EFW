@@ -14,6 +14,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
 import Utilities.ExcelReader;
@@ -55,6 +56,7 @@ public class efw_BaseTest extends BaseClass {
 			ChromeOptions options = new ChromeOptions();
 			options.setExperimentalOption("prefs", prefs);
 			options.setExperimentalOption("excludeSwitches", new String[] { "enable-automation" });
+			options.addArguments("disable-infobars");
 			options.addArguments("--disable-extension");
 			options.addArguments("--disable-notifications");
 			options.addArguments("--disable-incognito");
@@ -78,13 +80,13 @@ public class efw_BaseTest extends BaseClass {
 				System.getProperty("user.dir") + "\\ExtentReport\\AutomationReport_" + timeStamp + ".html");
 		spark_all.loadXMLConfig(
 				System.getProperty("user.dir") + "\\src\\test\\resources\\Report_config\\report_config.xml");
-//		spark_all.config().setReportName("All Tests report : " + pro.getProperty("URL"));
+		
 
-//		ExtentSparkReporter sparkReporter_failed = new ExtentSparkReporter(
-//				System.getProperty("user.dir") + "\\ExtentReport\\AutomationReport_Failure" + timeStamp + ".html");
-//		sparkReporter_failed.loadXMLConfig(
-//				System.getProperty("user.dir") + "\\src\\test\\resources\\Report_config\\report_config.xml");
-//		sparkReporter_failed.filter().statusFilter().as(new Status[] { Status.FAIL }).apply();
+		ExtentSparkReporter sparkReporter_failed = new ExtentSparkReporter(
+				System.getProperty("user.dir") + "\\ExtentReport\\AutomationReport_Failure" + timeStamp + ".html");
+		sparkReporter_failed.loadXMLConfig(
+				System.getProperty("user.dir") + "\\src\\test\\resources\\Report_config\\report_config.xml");
+		sparkReporter_failed.filter().statusFilter().as(new Status[] { Status.FAIL }).apply();
 //		extent.attachReporter(spark_all, sparkReporter_failed);
 		extent = new ExtentReports();
 		extent.setSystemInfo("OS", System.getProperty("os.name"));
@@ -92,7 +94,7 @@ public class efw_BaseTest extends BaseClass {
 		extent.setSystemInfo("UserName", System.getProperty("user.name"));
 		extent.setSystemInfo("HoseName", InetAddress.getLocalHost().getHostName());
 
-//		test = extent.createTest(Thread.currentThread().getStackTrace()[1].getMethodName().toUpperCase());
+//		
 		
 		
 	}

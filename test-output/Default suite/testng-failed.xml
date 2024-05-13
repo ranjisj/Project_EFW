@@ -3,16 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="ewf_TestCases.TC_03_CreateAccountScreen">
+      <class name="ewf_TestCases.TC_01_LoginPage">
         <methods>
-          <include name="checkStatus"/>
-          <include name="startTest"/>
-          <include name="reportFlush"/>
-          <include name="intialSetup"/>
           <include name="PopUPscreen"/>
+          <include name="startTest"/>
+          <include name="getResult"/>
+          <include name="intialSetup"/>
           <include name="endTest"/>
         </methods>
-      </class> <!-- ewf_TestCases.TC_03_CreateAccountScreen -->
+      </class> <!-- ewf_TestCases.TC_01_LoginPage -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

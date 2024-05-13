@@ -1,5 +1,7 @@
 package eFW_Pages;
 
+import com.aventstack.extentreports.Status;
+
 import efw_setUp.efw_BaseTest;
 
 public class MyAccountPage extends efw_BaseTest {
@@ -11,8 +13,15 @@ public class MyAccountPage extends efw_BaseTest {
 	
 	
 	public static void userAddress() {
+		try {
+			
 		getElement("xpath", view_address).click();
-
+		test.log(Status.PASS, "Successfully clicked the view address ");
+} 
+		
+		catch (Exception e) {
+			test.log(Status.FAIL, "Unable to Click the View Address "+e.getMessage());
+		}
 	}
 	
 	

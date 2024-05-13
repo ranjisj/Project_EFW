@@ -5,6 +5,8 @@ import java.io.IOException;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.openqa.selenium.WebElement;
 
+import com.aventstack.extentreports.Status;
+
 import efw_setUp.efw_BaseTest;
 
 public class TrackingPage extends efw_BaseTest {
@@ -17,7 +19,8 @@ public class TrackingPage extends efw_BaseTest {
 	private static String errorIncorrectOrder = "//section[@id='tracktorOrderDetails']//h1";
 	
 	public static void trackDetails() throws InvalidFormatException, IOException, InterruptedException {
-
+		
+		try {
 		getElement("xpath", trackOrderTitle).click();
 		WebElement element = getElement("XPATH", trackNumber);
 		scrollDown(element);
@@ -36,5 +39,10 @@ public class TrackingPage extends efw_BaseTest {
 		WebElement element4 = getElement("xpath", errorIncorrectOrder);
 		efw_BaseTest.assertEquals(data5, element4.getText(), "equal");
 		System.out.println("assert verified");
+		test.log(Status.PASS, "Error Message has been Verified ");
+
+		} catch (Exception e) {
+			test.log(Status.FAIL, "Error Message has not been Verified "+e.getMessage());
+		}
 	}
 }

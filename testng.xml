@@ -4,6 +4,11 @@
   <test thread-count="5" name="Test">
     <classes>
       <class name="ewf_TestCases.TC_01_LoginPage"/>
+      <class name="ewf_TestCases.TC_06_CartPage"/>
+      <class name="ewf_TestCases.TC_03_CreateAccountScreen"/>
+      <class name="ewf_TestCases.TC_04_Addaddress"/>
+      <class name="ewf_TestCases.TC_02_Userlogin"/>
+      <class name="ewf_TestCases.TC_05_TrackingScreen"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

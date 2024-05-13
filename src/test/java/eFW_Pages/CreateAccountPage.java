@@ -7,6 +7,8 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import com.aventstack.extentreports.Status;
+
 import efw_setUp.efw_BaseTest;
 
 public class CreateAccountPage extends efw_BaseTest{
@@ -36,6 +38,8 @@ public class CreateAccountPage extends efw_BaseTest{
 	
 	
 public static void createUser() throws InterruptedException, InvalidFormatException, IOException {
+		try {
+			
 		
 	 	getElement("xpath", createAccount).click();
 	 	
@@ -78,7 +82,12 @@ public static void createUser() throws InterruptedException, InvalidFormatExcept
 		String dataErrorMessage = efw_BaseTest.getData("CreateAcctCredentials", 1, 4, path);
 		efw_BaseTest.assertEquals(dataErrorMessage, eleErrorMessage.getText(), "equal");
 		System.out.println("Error Message has been Verified");
+		test.log(Status.PASS, "Successful CreateUser ");
+		} 
 		
+		catch (Exception e) {
+			test.log(Status.FAIL, "Unable to CreateUser "+e.getMessage());
+		}
 	}
 	
 	

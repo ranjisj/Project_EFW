@@ -7,6 +7,8 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import com.aventstack.extentreports.Status;
+
 import efw_setUp.efw_BaseTest;
 
 public class AddressPage extends efw_BaseTest {
@@ -52,6 +54,8 @@ public class AddressPage extends efw_BaseTest {
 
 	public static void userAddressDetail() throws InvalidFormatException, IOException, InterruptedException {
 		
+		try {
+			
 		getElement("xpath", addAddress).click();
 		
 		String path = "C:\\Users\\welcome\\eclipse-workspace\\fwf_project\\src\\test\\resources\\TestData\\EFW_TestDataSheet.xlsx";
@@ -72,43 +76,45 @@ public class AddressPage extends efw_BaseTest {
 		String data3 = efw_BaseTest.getData("AddressDetails", 1, 2, path);
 		System.out.println(data3);
 		getElement(path, data3);
-		WebElement element3 = getElement("xpath", txt_address1);
+		WebElement element3 = getElement("XPATH", txt_address1);
 		efw_BaseTest.sendKeys(element3, data3);
 		System.out.println("address1 is entered");
 		String data4 = efw_BaseTest.getData("AddressDetails", 1, 3, path);
 		System.out.println(data4);
 		getElement(path, data4);
-		WebElement element4 = getElement("xpath", txt_address2);
+		WebElement element4 = getElement("XPATH", txt_address2);
 		efw_BaseTest.sendKeys(element4, data4);
 		System.out.println("address2 is entered");
 		String data5 = efw_BaseTest.getData("AddressDetails", 1, 4, path);
 		System.out.println(data5);
 		getElement(path, data5);
-		WebElement element5 = getElement("xpath", txt_city);
+		WebElement element5 = getElement("XPATH", txt_city);
 		efw_BaseTest.sendKeys(element5, data5);
 		System.out.println("city is entered");
 		String data6 = efw_BaseTest.getData("AddressDetails", 1, 5, path);
 		System.out.println(data6);
 		getElement(path, data6);
-		WebElement element6 = getElement("xpath", txt_province);
+		WebElement element6 = getElement("XPATH", txt_province);
 		efw_BaseTest.sendKeys(element6, data6);
 		System.out.println("province is entered");
 		String data7 = efw_BaseTest.getData("AddressDetails", 1, 6, path);
 		System.out.println(data7);
 		getElement(path, data7);
-		WebElement element7 = getElement("xpath", txt_zip);
+		WebElement element7 = getElement("XPATH", txt_zip);
 		efw_BaseTest.sendKeys(element7, data7);
 		System.out.println("zip is entered");
 		String data8 = efw_BaseTest.getData("AddressDetails", 1, 7, path);
 		System.out.println(data8);
 		getElement(path, data8);
-		WebElement element8= getElement("xpath", txt_phone);
+		WebElement element8= getElement("XPATH", txt_phone);
 		efw_BaseTest.sendKeys(element8, data6);
 		System.out.println("phone is entered");
 		
 		getElement("xpath", checkbox_default).click();
 		getElement("xpath", btn_addaddress).click();
-		
+		test.log(Status.PASS, "Able to enter the User Details ");
 
+	} catch (Exception e) {
+		test.log(Status.FAIL, "Unable to enter the User Details "+e.getMessage());
 	}
-}
+	}}
